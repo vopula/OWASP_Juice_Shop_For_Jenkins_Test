@@ -8,6 +8,12 @@ pipeline {
             }
         }
 
+        stage('Greet User') {
+            stage {
+                sh 'echo "Hello, User!"'
+            }
+        }
+
         stage('Build') {
             steps {
                 sh 'ls -la'
